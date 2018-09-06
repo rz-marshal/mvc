@@ -6,8 +6,22 @@
     <title>Авторизация</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ constant('STYLESHEETS_PATH') }}main.css" />
+    <script type="text/javascript" src="{{ constant('SCRIPTS_PATH') }}main.js"></script>
+
 </head>
 <body>
-<h1>login WORKS! h1</h1>
+<div class="container">
+<img src="{{ constant('IMAGES_PATH') }}login_ic.png" alt="login">
+<form class="form__signin" id="form-signin" name="form-signin" method="POST">
+<div class="form_inputs">
+<input type="text" class="form__text" name="login" id="login" placeholder="Логин" required>
+<input type="password" class="form__text" name="password" id="password" placeholder="Пароль" required>
+<button class="btn" id="btn" name="login-submit" type="submit">Войти</button>
+</div>
+<div class="message-box">Неверный логин</div>
+<a href="#" class="action-link">Регистрация</a>
+</form>
+</div>
+<script type="text/javascript" src="{{ constant('SCRIPTS_PATH') }}md5.min.js"></script>
 </body>
 </html>
