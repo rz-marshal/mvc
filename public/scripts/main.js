@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     loginSubmit.addEventListener("click", function(e) {
         e.preventDefault();
-        var request = new XMLHttpRequest();
+        let request = new XMLHttpRequest();
         request.open(
             "POST",
             "http://localhost/account/authorize",
@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
         request.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 
-        var password = md5(form.elements.password.value);
-
-        var jObj = {
+        let password = md5(form.elements.password.value);
+        console.log(password);
+        let jObj = {
             "type": "signin",
             "login": form.elements.login.value,
             "password": password,

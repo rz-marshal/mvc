@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "twig/twig": "^2.5"
+        "twig/twig": "^2.5",
+        "illuminate/database": "5.1.8"
     },
 
     "autoload": {
